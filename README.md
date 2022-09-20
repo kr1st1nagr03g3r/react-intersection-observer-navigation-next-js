@@ -1,4 +1,4 @@
-# Fixed Position / Responsive / Scroll-Triggered / Animated Navigation 
+# Fixed Position (sticky) / Responsive / Scroll-Triggered / Animated Navigation 
 
 I found myself challenged to make a fixed-position navigation, which triggers on-scroll. Using React hooks via [React Intersection Observer](https://github.com/thebuilder/react-intersection-observer), I created this simple nav, which changes height when scrolling in or out of the viewport, and has text come into focus on page-load.
 
