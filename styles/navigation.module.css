@@ -1,13 +1,95 @@
-.sticky {
-  position: fixed;
-  background: white;
-  height: 100px;
-}
-
 .statusElement {
   width: 100vw;
+  position: fixed;
+  background: white;
 }
 
-.emojiIcon {
-  background: black;
+.relativeContainer {
+  display: flex;
+}
+
+.navItems {
+  padding-right: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Remove padding from last item */
+.navItemEnd {
+  padding-right: 0px;
+}
+
+:hover.navItems,
+:hover.navItemEnd {
+  text-decoration: underline;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.navAnimateSmall,
+.navAnimateLarge {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ANIMATIONS */
+
+/* When user scrolls into the area, make the navigation animate up, smaller */
+.navAnimateSmall {
+  display: flex;
+  height: 50px;
+  animation: scale-down-top 0.4s both;
+}
+
+@-webkit-keyframes scale-down-top {
+  0% {
+    height: 100px;
+  }
+  100% {
+    height: 50px;
+  }
+}
+@keyframes scale-down-top {
+  0% {
+    height: 100px;
+  }
+  100% {
+    height: 50px;
+  }
+}
+
+/* When user scrolls back up, the navigation returns to it's larger size */
+.navAnimateLarge {
+  display: flex;
+  height: 100px;
+  animation: scale-up-top 0.4s both;
+}
+
+@-webkit-keyframes scale-up-top {
+  0% {
+    height: 50px;
+  }
+  100% {
+    height: 100px;
+  }
+}
+@keyframes scale-up-top {
+  0% {
+    height: 50px;
+  }
+  100% {
+    height: 100px;
+  }
 }

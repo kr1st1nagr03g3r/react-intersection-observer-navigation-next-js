@@ -1,42 +1,76 @@
-import * as React from "react";
+import { Container } from '@mui/material'
+import Link from 'next/link'
+import * as React from 'react'
 import styles from '../styles/navigation.module.css'
 
-
-// const statusElement = {
-//     position: "absolute",
-//     top: 0,
-//     right: 0,
-
-//     height: 32,
-//     background: "rgba(255, 255, 255, 0.6)",
-//     display: "flex",
-//     justifyContent: "center",
-//     alignItems: "center",
-
-// };
-
-// const emojiIcon = {
-//     width: "1em",
-//     height: "1em",
-//     lineHeight: 1
-// };
-
-function Status({ inView, }) {
+function Status({ inView }) {
     return (
-        <div className={styles.sticky}>
-            <div className={styles.statusElement}>
-                {inView ? (
-                    <span role="img" aria-label="In view" className={styles.emojiIcon}>
-                        ✅
-                    </span>
-                ) : (
-                    <span role="img" aria-label="Outside the viewport" clasName={styles.anotherStyle}>
-                        ❌
-                    </span>
-                )}
-            </div>
+        <div className={styles.statusElement}>
+            {inView ? (
+                /////////////////// Navigation OutOfView
+                <span role="img" aria-label="Outside the viewport">
+                    {/* ❌ */}
+                    <Container className={styles.navAnimateSmall}>
+                        <div className={styles.relativeContainer}>
+                            <div className={styles.logo}>
+                                <Link href="/">
+                                    <a>
+                                        <i>Kristina Groeger</i>
+                                    </a>
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className={styles.links}>
+                            <Link href="/">
+                                <a className={styles.navItems}>Home</a>
+                            </Link>
+                            <Link href="/work">
+                                <a className={styles.navItems}>Work</a>
+                            </Link>
+                            <Link href="/about">
+                                <a className={styles.navItems}>About</a>
+                            </Link>
+                            <Link href="/contact">
+                                <a className={styles.navItemEnd}>Contact</a>
+                            </Link>
+                        </div>
+                    </Container>
+                </span>
+            ) : (
+                /////////////////// Navigation InView
+                <span role="img" aria-label="In view">
+                    {/* ✅ */}
+                    <Container className={styles.navAnimateLarge}>
+                        <div className={styles.relativeContainer}>
+                            <div className={styles.logo}>
+                                <Link href="/">
+                                    <a>
+                                        <i>Kristina Groeger</i>
+                                    </a>
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className={styles.links}>
+                            <Link href="/">
+                                <a className={styles.navItems}>Home</a>
+                            </Link>
+                            <Link href="/work">
+                                <a className={styles.navItems}>Work</a>
+                            </Link>
+                            <Link href="/about">
+                                <a className={styles.navItems}>About</a>
+                            </Link>
+                            <Link href="/contact">
+                                <a className={styles.navItemEnd}>Contact</a>
+                            </Link>
+                        </div>
+                    </Container>
+                </span>
+            )}
         </div>
-    );
+    )
 }
 
-export default Status;
+export default Status
