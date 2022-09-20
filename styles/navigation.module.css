@@ -2,6 +2,7 @@
   width: 100vw;
   position: fixed;
   background: white;
+  display: flex !important;
 }
 
 .relativeContainer {
