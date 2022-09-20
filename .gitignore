@@ -397,3 +397,11 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 .next
+yarn.lock
+*.lock
+/yarn.lock
+/*.lock
+package-lock.json
+/package-lock.json
+.DS_Store
+/DS_Store
