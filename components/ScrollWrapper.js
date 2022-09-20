@@ -12,10 +12,6 @@ const defaultStyle = {
     color: "#fff"
 };
 
-
-
-
-
 /**
  * ScrollWrapper directs the user to scroll the page to reveal it's children.
  * Use this on Modules that have scroll and/or observer triggers.
