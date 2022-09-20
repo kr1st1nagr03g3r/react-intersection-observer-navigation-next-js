@@ -1,0 +1,13 @@
+.sticky {
+  position: fixed;
+  background: white;
+  height: 100px;
+}
+
+.statusElement {
+  width: 100vw;
+}
+
+.emojiIcon {
+  background: black;
+}
