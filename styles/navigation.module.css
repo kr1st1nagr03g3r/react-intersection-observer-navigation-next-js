@@ -47,7 +47,7 @@
 
 .navAnimateSmall,
 .navAnimateLarge {
-  display: flex;
+  display: flex !important;
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
