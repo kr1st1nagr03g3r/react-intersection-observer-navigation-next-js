@@ -1,6 +1,8 @@
 import * as React from "react";
 import ScrollWrapper from "../components/ScrollWrapper";
 import { useInView } from "react-intersection-observer";
+import Head from "next/head";
+
 
 export default function Temp() {
     const { ref, inView } = useInView({
@@ -8,12 +10,18 @@ export default function Temp() {
     });
 
     return (
-        <ScrollWrapper inView={inView}>
-            <div ref={ref} className="inview-block">
-                <h2>
-                    Element is inside the viewport: <strong>{inView.toString()}</strong>
-                </h2>
-            </div>
-        </ScrollWrapper>
+        <>
+            <Head>
+
+
+            </Head>
+            <ScrollWrapper inView={inView}>
+                <div ref={ref} className="inview-block">
+                    <h2>
+                        Element is inside the viewport: <strong>{inView.toString()}</strong>
+                    </h2>
+                </div>
+            </ScrollWrapper>
+        </>
     );
 }
