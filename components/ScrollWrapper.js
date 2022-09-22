@@ -1,5 +1,5 @@
 import * as React from "react";
-import Status from "./Status";
+import Nav from "./Nav";
 
 const defaultStyle = {
     height: "101vh",
@@ -21,7 +21,7 @@ const defaultStyle = {
 const ScrollWrapper = ({ children, style, inView, ...props }) => {
     return (
         <div {...props}>
-            <Status inView={inView} />
+            <Nav inView={inView} />
             <section style={{ ...defaultStyle, ...style }}>
                 <h1>⬇ Scroll Down ⬇</h1>
             </section>
@@ -34,3 +34,4 @@ const ScrollWrapper = ({ children, style, inView, ...props }) => {
 };
 
 export default ScrollWrapper;
+
