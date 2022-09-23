@@ -21,7 +21,8 @@ export default function NavLinks() {
 
         @media only screen and (max-width: 900px) {
           .links {
-            display: none;
+            display: flex;
+            flex-direction: column;
           }
         }
       `}</style>

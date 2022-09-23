@@ -89,10 +89,18 @@ small,
   display: none;
 }
 
+.desktop {
+  display: block;
+}
+
 /* MOBILE STYLES */
 @media only screen and (max-width: 900px) {
   .mobile {
     display: block;
+  }
+
+  .desktop {
+    display: none;
   }
 }
 

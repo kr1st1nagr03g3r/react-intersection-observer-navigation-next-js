@@ -20,6 +20,10 @@
   text-align: center;
 }
 
+.testing {
+  display: flex;
+}
+
 .logoInView {
   display: flex;
   flex-direction: row;
@@ -95,13 +99,8 @@
 
 /* MOBILE STYLES */
 @media only screen and (max-width: 900px) {
-  .logo {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-
   .navAnimateLarge,
   .navAnimateSmall {
-    justify-content: space-around;
+    display: none !important;
   }
 }
