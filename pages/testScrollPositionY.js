@@ -13,7 +13,6 @@ const ScrollDepth = () => {
 }
 
 
-
 const Scroll = () => {
     const handleScroll = event => {
         console.log('scrollTop: ', event.currentTarget.scrollTop);

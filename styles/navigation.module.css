@@ -8,24 +8,9 @@
   display: flex;
 }
 
-.navItems {
-  padding-right: 30px;
-  letter-spacing: 1px;
-}
-
-/* Remove padding from last item */
-.navItemEnd {
-  padding-right: 0px;
-}
-
-:hover.navItems,
-:hover.navItemEnd {
-  text-decoration: underline;
-}
-
 .logo {
   margin: 1.38rem 0;
-  font-weight: 700;
+  font-weight: 400;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -110,12 +95,13 @@
 
 /* MOBILE STYLES */
 @media only screen and (max-width: 900px) {
-  .links {
-    display: none;
-  }
-
   .logo {
     font-size: 1rem;
     font-weight: 400;
+  }
+
+  .navAnimateLarge,
+  .navAnimateSmall {
+    justify-content: space-around;
   }
 }
